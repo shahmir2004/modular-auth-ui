@@ -1,0 +1,13 @@
+{
+  "name": "modular-auth-workspace",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/demo",
+    "build:lib": "npm run build --workspace=packages/auth-module",
+    "build": "npm run build:lib && npm run build --workspace=apps/demo"
+  }
+}
